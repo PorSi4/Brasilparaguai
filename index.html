@@ -139,7 +139,7 @@
 
             <!-- Ícone do WhatsApp Grande -->
             <div class="mt-16">
-                <a href="#" onclick="joinGroup()"
+                <a onclick="joinGroup()"
                     class="block bg-green-500 rounded-full p-4 whatsapp-pulse hover:scale-110 transition-transform duration-300">
                     <i class="fab fa-whatsapp text-5xl text-white"></i>
                 </a>
@@ -159,7 +159,7 @@
     <script>
         function joinGroup() {
             if (typeof fbq === 'function') {
-                fbq('track', 'Lead'); 
+                fbq('track', 'Lead');
             }
 
             window.location.href = "https://chat.whatsapp.com/CEwL6bO5IzjC2yjyCTYoTI?mode=gi_t";

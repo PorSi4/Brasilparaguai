@@ -18,7 +18,7 @@
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
                 n.callMethod ?
-                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
             n.queue = []; t = b.createElement(e); t.async = !0;
@@ -158,9 +158,11 @@
 
     <script>
         function joinGroup() {
-            // Aqui você colocaria o link do seu grupo do WhatsApp
-            window.location.href = "https://chat.whatsapp.com/CEwL6bO5IzjC2yjyCTYoTI?mode=gi_t";
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead'); 
+            }
 
+            window.location.href = "https://chat.whatsapp.com/CEwL6bO5IzjC2yjyCTYoTI?mode=gi_t";
         }
 
         // Simples animação de entrada ao carregar
